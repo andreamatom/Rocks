@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roooooocks</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="favicon_rockwebsite3.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+
+<div class="navigation">
+    <header class="header-container">
+
+                <div class="left-content">
+                    <label for="col-slider"></label>
+                    <input type="range" id="col-slider" min="4" max="17" value="17" oninput="updateColumns(this.value)">
+                </div>
+    
+
+        <div class="right-content">
+        <button id="aboutBtn">About</button>
+<div id="aboutPopup" class="popup">
+    <h1>About <em>roooooocks</em></h1>
+    <h2><em>roooooocks</em> showcases 140 different interpretations of a rock by Andrea Mato. The creation of these interpretations involved extensive experimentation with various materials, and approaches. The website allows the audience to filter by category to explore the diverse methods utilized. <br> <br>
+        Acknowledgements to Kathleen Sleboda, Christopher Sleboda, and Minkyoung Kim. </h2>
+    <button onclick="togglePopup()" id="closeButton">x</button>
+</div> 
+<div class="right-content">
+    <button onclick="shuffleImages()">Shuffle Rocks</button>
+</div> 
+
+</div>
+
+    </header>
+
+    <div>
+        <button class="filter-btn" onclick="filterImages('all'); setActiveButton(this);">All</button>
+        <button class="filter-btn" onclick="filterImages('blackvectorlines'); setActiveButton(this);">Black Vector Lines</button>
+        <button class="filter-btn" onclick="filterImages('coloronly'); setActiveButton(this);">Color Only</button>
+        <button class="filter-btn" onclick="filterImages('halftones'); setActiveButton(this);">Halftones</button>
+        <button class="filter-btn" onclick="filterImages('twodimensional'); setActiveButton(this);">Two Dimensional</button>
+        <button class="filter-btn" onclick="filterImages('threedimensional'); setActiveButton(this);">Three Dimensional</button>
+        <button class="filter-btn" onclick="filterImages('analogbrush'); setActiveButton(this);">Analog Brush</button>
+        <button class="filter-btn" onclick="filterImages('usingphotographs'); setActiveButton(this);">Using Photographs</button>
+        <button class="filter-btn" onclick="filterImages('texture'); setActiveButton(this);">Texture</button>
+        <button class="filter-btn" onclick="filterImages('sculptural'); setActiveButton(this);">Sculptural</button>
+        <button class="filter-btn" onclick="filterImages('highcontrast'); setActiveButton(this);">High Contrast</button>
+        <button class="filter-btn" onclick="filterImages('lowcontrast'); setActiveButton(this);">Low Contrast</button>
+        <button class="filter-btn" onclick="filterImages('collage'); setActiveButton(this);">Collage</button>
+        <button class="filter-btn" onclick="filterImages('madewithrocks'); setActiveButton(this);">Made With Rocks</button>
+        <button class="filter-btn" onclick="filterImages('withoutlooking'); setActiveButton(this);">Without Looking</button>
+    </div>
+</div>
+
+<div id="imageModal" class="modal">
+    <div class="modal-content">
+        <!-- Close button with unique ID and class for styling and functionality -->
+        <span id="closeButton" class="close">&times;</span>
+        <img src="" id="modalImage">
+    </div>
+    <!-- Previous and next buttons for navigating the slideshow -->
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+</div>
+
+
+
+  <!-- BLACK VECTOR LINES-->
+    <div class="image-grid">
+        <div class="image-item" data-category="blackvectorlines">
+            <img src="jpegs/1_blackvectorlines/blackvectorlines1.png"></a></div>
+
+        <div class="image-item" data-category="blackvectorlines">
+            <img src="jpegs/1_blackvectorlines/blackvectorlines2.png"> </a></div>
+          
+            <div class="image-item" data-category="blackvectorlines">
+                <img src="jpegs/1_blackvectorlines/blackvectorlines3.png"> </a></div>
+            
+                <div class="image-item" data-category="blackvectorlines">
+                    <img src="jpegs/1_blackvectorlines/blackvectorlines4.png"> </a></div>
+        
+                <div class="image-item" data-category="blackvectorlines">
+                    <img src="jpegs/1_blackvectorlines/blackvectorlines5.png"> </a></div>
+                  
+                    <div  class="image-item" data-category="blackvectorlines">
+                        <img src="jpegs/1_blackvectorlines/blackvectorlines6.png"> </a></div>
+
+                        <div  class="image-item" data-category="blackvectorlines">
+                            <img src="jpegs/1_blackvectorlines/blackvectorlines7.png"> </a></div>
+                        
+                            <div  class="image-item" data-category="blackvectorlines">
+                                <img src="jpegs/1_blackvectorlines/blackvectorlines8.png"> </a></div>
+                    
+                            <div  class="image-item" data-category="blackvectorlines">
+                                <img src="jpegs/1_blackvectorlines/blackvectorlines9.png"> </a></div>
+                              
+                                <div  class="image-item" data-category="blackvectorlines">
+                                    <img src="jpegs/1_blackvectorlines/blackvectorlines10.png"> </a></div>
+                                
+                    
+             <!-- COLOR ONLY -->
+                    
+            
+             <div class="image-item" data-category="coloronly">
+                <img src="jpegs/2_coloronly/color1.png"></a></div>
+
+            <div class="image-item" data-category="coloronly">
+                <img src="jpegs/2_coloronly/color2.png"></a></div>
+
+                <div class="image-item" data-category="coloronly">
+                    <img src="jpegs/2_coloronly/color3.png"></a></div>
+
+                    <div class="image-item" data-category="coloronly">
+                        <img src="jpegs/2_coloronly/color4.png"></a></div>
+        
+
+                        <div class="image-item" data-category="coloronly">
+                            <img src="jpegs/2_coloronly/color5.png"></a></div>
+                
+                            <div class="image-item" data-category="coloronly">
+                                <img src="jpegs/2_coloronly/color6.png"></a></div>
+                
+                                <div class="image-item" data-category="coloronly">
+                                    <img src="jpegs/2_coloronly/color7.png"></a></div>
+                        
+                                    <div class="image-item" data-category="coloronly">
+                                        <img src="jpegs/2_coloronly/color8.png"></a></div>
+
+                                        <div class="image-item" data-category="coloronly">
+                                            <img src="jpegs/2_coloronly/color9.png"></a></div>
+                                
+                                            <div class="image-item" data-category="coloronly">
+                                                <img src="jpegs/2_coloronly/color10.png"></a></div>
+           
+                                              
+        <!-- HALFTONES -->  
+        <div class="image-item" class="image-item" data-category="halftones">
+            <img src="jpegs/3_halftones/halftones1.png"></a></div>
+
+            <div class="image-item" class="image-item" data-category="halftones">
+     
+                <img src="jpegs/3_halftones/halftones2.png"></a></div>
+
+        
+                    <div class="image-item" class="image-item" data-category="halftones">
+             
+                        <img src="jpegs/3_halftones/halftones4.png"></a></div>
+
+                        <div class="image-item"  class="image-item" data-category="halftones">
+                 
+                            <img src="jpegs/3_halftones/halftones5.png"></a></div>
+    
+
+                            <div class="image-item"  class="image-item" data-category="halftones">
+                     
+                                <img src="jpegs/3_halftones/halftones6.png"></a></div>
+                
+                                <div class="image-item"  class="image-item" data-category="halftones">
+                         
+                                    <img src="jpegs/3_halftones/halftones7.png"></a></div>
+                        
+                                    <div class="image-item"  class="image-item" data-category="halftones">
+                             
+                                        <img src="jpegs/3_halftones/halftones8.png"></a></div>
+
+                                        <div class="image-item"  class="image-item" data-category="halftones">
+                                 
+                                            <img src="jpegs/3_halftones/halftones9.png"></a></div>
+                                
+                                            <div class="image-item"  class="image-item" data-category="halftones">
+                                     
+                                                <img src="jpegs/3_halftones/halftones10.png"></a></div>
+        
+      <!-- 2D-->  
+      <div class="image-item"class="image-item" data-category="twodimensional">
+        <a href="1_1.html">
+        <img src="jpegs/4_2d/2d1.png"></a></div>
+
+        <div class="image-item" class="image-item" data-category="twodimensional">
+ 
+            <img src="jpegs/4_2d/2d2.png"></a></div>
+
+            <div class="image-item" class="image-item" data-category="twodimensional">
+     
+                <img src="jpegs/4_2d/2d3.png"></a></div>
+        
+                <div class="image-item" class="image-item" data-category="twodimensional">
+         
+                    <img src="jpegs/4_2d/2d4.png"></a></div>
+
+                    <div class="image-item" class="image-item" data-category="twodimensional">
+             
+                        <img src="jpegs/4_2d/2d5.png"></a></div>
+                
+                        <div class="image-item" class="image-item" data-category="twodimensional">
+                 
+                            <img src="jpegs/4_2d/2d6.png"></a></div>
+                
+                            <div class="image-item" class="image-item" data-category="twodimensional">
+                     
+                                <img src="jpegs/4_2d/2d7.png"></a></div>
+                        
+                                <div class="image-item" class="image-item" data-category="twodimensional">
+                                    <a href="1_1.html" >
+                                    <img src="jpegs/4_2d/2d8.png"></a></div>
+
+                                    <div class="image-item" class="image-item" data-category="twodimensional">
+                                        <a href="1_1.html" >
+                                        <img src="jpegs/4_2d/2d9.png"></a></div>
+                                
+                                        <div class="image-item" class="image-item" data-category="twodimensional">
+                                 
+                                            <img src="jpegs/4_2d/2d10.png"></a></div>
+
+    
+<!-- 3D-->  
+
+
+<div class="image-item" class="image-item" data-category="threedimensional">
+    <a href="1_1.html">
+    <img src="jpegs/5_3d/3d1.png"></a></div>
+
+
+<div class="image-item" class="image-item" data-category="threedimensional">
+    <a href="1_1.html" >
+    <img src="jpegs/5_3d/3d2.png"></a></div>
+
+    <div class="image-item" class="image-item" data-category="threedimensional">
+        <a href="1_1.html">
+        <img src="jpegs/5_3d/3d3.png"></a></div>
+
+        <div class="image-item" class="image-item" data-category="threedimensional">
+            <a href="1_1.html" >
+            <img src="jpegs/5_3d/3d4.png"></a></div>
+
+            <div class="image-item" class="image-item" data-category="threedimensional">
+     
+                <img src="jpegs/5_3d/3d5.png"></a></div>
+            
+            
+                <div class="image-item" class="image-item" data-category="threedimensional">
+                    <a href="1_1.html" >
+                    <img src="jpegs/5_3d/3d6.png"></a></div>
+            
+                     
+                <div class="image-item" class="image-item" data-category="threedimensional">
+                    <a href="1_1.html" >
+                    <img src="jpegs/5_3d/3d7.png"></a></div>
+
+                     
+                <div class="image-item" class="image-item" data-category="threedimensional">
+                    <a href="1_1.html" >
+                    <img src="jpegs/5_3d/3d8.png"></a></div>
+
+                            <div class="image-item" class="image-item" data-category="threedimensional">
+                     
+                                <img src="jpegs/5_3d/3d9.png"></a></div>
+                        
+                                <div class="image-item" class="image-item" data-category="threedimensional">
+                                    <a href="1_1.html" >
+                                    <img src="jpegs/5_3d/3d10.png"></a></div>
+
+<!--Analogue Brush-->  
+
+<div class="image-item" class="image-item" data-category="analogbrush">
+    <a href="1_1.html">
+    <img src="jpegs/6_analogbrush/brush1.png"></a></div>
+
+    <div class="image-item" class="image-item" data-category="analogbrush">
+        <a href="1_1.html">
+        <img src="jpegs/6_analogbrush/brush2.png"></a></div>
+
+        <div class="image-item" class="image-item" data-category="analogbrush">
+            <a href="1_1.html" >
+            <img src="jpegs/6_analogbrush/brush3.png"></a></div>
+        
+            <div class="image-item" class="image-item" data-category="analogbrush">
+     
+                <img src="jpegs/6_analogbrush/brush4.png"></a></div>
+
+                <div class="image-item" class="image-item" data-category="analogbrush">
+         
+                    <img src="jpegs/6_analogbrush/brush5.png"></a></div>
+                
+                    <div class="image-item" class="image-item" data-category="analogbrush">
+                        <a href="1_1.html" >
+                        <img src="jpegs/6_analogbrush/brush6.png"></a></div>
+                
+                        <div class="image-item" class="image-item" data-category="analogbrush">
+                            <a href="1_1.html" >
+                            <img src="jpegs/6_analogbrush/brush7.png"></a></div>
+                        
+                            <div class="image-item" class="image-item" data-category="analogbrush">
+                                <a href="1_1.html" >
+                                <img src="jpegs/6_analogbrush/brush8.png"></a></div>
+
+                                <div class="image-item" class="image-item" data-category="analogbrush">
+                                    <a href="1_1.html" >
+                                    <img src="jpegs/6_analogbrush/brush9.png"></a></div>
+                                
+                                    <div class="image-item"class="image-item" data-category="analogbrush">
+                                        <a href="1_1.html" >
+                                        <img src="jpegs/6_analogbrush/brush10.png"></a></div>
+
+
+<!--Using Photographs-->  
+
+<div class="image-item" class="image-item" data-category="usingphotographs">
+    <a href="1_1.html">
+    <img src="jpegs/7_usingphotographs/photo1.png"></a></div>
+
+    <div class="image-item" class="image-item" data-category="usingphotographs">
+        <a href="1_1.html">
+        <img src="jpegs/7_usingphotographs/photo2.png"></a></div>
+
+        <div class="image-item" class="image-item" data-category="usingphotographs">
+ 
+            <img src="jpegs/7_usingphotographs/photo3.png"></a></div>
+
+    <div class="image-item" class="image-item" data-category="usingphotographs">
+        <a href="1_1.html" >
+        <img src="jpegs/7_usingphotographs/photo4.png"></a></div>
+    
+    
+<div class="image-item" class="image-item" data-category="usingphotographs">
+    <a href="1_1.html" >
+    <img src="jpegs/7_usingphotographs/photo5.png"></a></div>
+
+    <div class="image-item" class="image-item" data-category="usingphotographs">
+        <a href="1_1.html">
+        <img src="jpegs/7_usingphotographs/photo6.png"></a></div>
+    
+        
+    <div class="image-item" class="image-item" data-category="usingphotographs">
+        <a href="1_1.html">
+        <img src="jpegs/7_usingphotographs/photo7.png"></a></div>
+
+            <div class="image-item" class="image-item" data-category="usingphotographs">
+     
+                <img src="jpegs/7_usingphotographs/photo8.png"></a></div>
+            
+            
+        <div class="image-item" class="image-item" data-category="usingphotographs">
+ 
+            <img src="jpegs/7_usingphotographs/photo9.png"></a></div>
+
+                
+        
+    <!--Texture-->  
+
+
+    <div class="image-item" class="image-item" data-category="texture">
+        <a href="1_1.html" >
+        <img src="jpegs/8_texture/texture1.png"></a></div>
+
+        <div class="image-item" class="image-item" data-category="texture">
+ 
+            <img src="jpegs/8_texture/texture2.png"></a></div>
+
+            <div class="image-item" class="image-item" data-category="texture">
+                <a href="1_1.html" >
+                <img src="jpegs/8_texture/texture3.png"></a></div>
+        
+                <div class="image-item" class="image-item" data-category="texture">
+         
+                    <img src="jpegs/8_texture/texture4.png"></a></div>
+
+                    <div class="image-item" class="image-item" data-category="texture">
+             
+                        <img src="jpegs/8_texture/texture5.png"></a></div>
+                
+                        <div class="image-item" class="image-item" data-category="texture">
+                 
+                            <img src="jpegs/8_texture/texture6.png"></a></div>
+                
+                            <div class="image-item" class="image-item" data-category="texture">
+                     
+                                <img src="jpegs/8_texture/texture7.png"></a></div>
+                        
+                                <div class="image-item" class="image-item" data-category="texture">
+                         
+                                    <img src="jpegs/8_texture/texture8.png"></a></div>
+
+                                    <div class="image-item" class="image-item" data-category="texture">
+                             
+                                        <img src="jpegs/8_texture/texture9.png"></a></div>
+                                
+                                        <div class="image-item" class="image-item" data-category="texture">
+                                 
+                                            <img src="jpegs/8_texture/texture10.png"></a></div>
+            
+    <!--Sculptural-->  
+
+
+    <div class="image-item" class="image-item" data-category="sculptural">
+        <a href="1_1.html">
+        <img src="jpegs/9_sculptural/sculptural1.png"></a></div>
+
+        <div class="image-item"  class="image-item" data-category="sculptural">
+            <a href="1_1.html" >
+            <img src="jpegs/9_sculptural/sculptural2.png"></a></div>
+
+            <div class="image-item"  class="image-item" data-category="sculptural">
+                <a href="1_1.html" >
+                <img src="jpegs/9_sculptural/sculptural3.png"></a></div>
+
+            
+                <div class="image-item"  class="image-item" data-category="sculptural">
+         
+                    <img src="jpegs/9_sculptural/sculptural4.png"></a></div>
+
+                    <div class="image-item"  class="image-item" data-category="sculptural">
+             
+                        <img src="jpegs/9_sculptural/sculptural5.png"></a></div>
+                
+                        <div class="image-item"  class="image-item" data-category="sculptural">
+                            <a href="1_1.html" >
+                            <img src="jpegs/9_sculptural/sculptural6.png"></a></div>
+                
+                            <div class="image-item"  class="image-item" data-category="sculptural">
+                     
+                                <img src="jpegs/9_sculptural/sculptural7.png"></a></div>
+                        
+                                <div class="image-item"  class="image-item" data-category="sculptural">
+                         
+                                    <img src="jpegs/9_sculptural/sculptural8.png"></a></div>
+
+                                    <div class="image-item"  class="image-item" data-category="sculptural">
+                             
+                                        <img src="jpegs/9_sculptural/sculptural9.png"></a></div>
+
+                                
+                                  
+      <!--High Contrast-->  
+
+    <div class="image-item"  class="image-item" data-category="highcontrast">
+        <a href="1_1.html">
+        <img src="jpegs/10_highcontrast/highcontrast1.png"></a></div>                                  
+
+        <div class="image-item"  class="image-item" data-category="highcontrast">
+            <a href="1_1.html" >
+            <img src="jpegs/10_highcontrast/highcontrast2.png"></a></div>    
+
+            <div class="image-item"  class="image-item" data-category="highcontrast">
+     
+                <img src="jpegs/10_highcontrast/highcontrast3.png"></a></div>                                  
+        
+                <div class="image-item"  class="image-item" data-category="highcontrast">
+                    <a href="1_1.html" >
+                    <img src="jpegs/10_highcontrast/highcontrast4.png"></a></div>    
+
+                    <div class="image-item"  class="image-item" data-category="highcontrast">
+                        <a href="1_1.html" >
+                        <img src="jpegs/10_highcontrast/highcontrast5.png"></a></div>                                  
+                
+                        <div class="image-item"  class="image-item" data-category="highcontrast">
+                 
+                            <img src="jpegs/10_highcontrast/highcontrast6.png"></a></div>    
+                
+                            <div class="image-item"  class="image-item" data-category="highcontrast">
+                     
+                                <img src="jpegs/10_highcontrast/highcontrast7.png"></a></div>                                     
+
+                                <div class="image-item"  class="image-item" data-category="highcontrast">
+                         
+                                    <img src="jpegs/10_highcontrast/highcontrast8.png"></a></div>                                     
+
+                                    
+                                    <div class="image-item"  class="image-item" data-category="highcontrast">
+                             
+                                        <img src="jpegs/10_highcontrast/highcontrast9.png"></a></div>                                  
+                                
+                                        <div class="image-item"  class="image-item" data-category="highcontrast">
+                                 
+                                            <img src="jpegs/10_highcontrast/highcontrast10.png"></a></div>    
+        
+ <!--Low contrast-->  
+
+ <div class="image-item" class="image-item" data-category="lowcontrast">
+    <a href="1_1.html" >
+    <img src="jpegs/11_lowcontrast/lowcontrast1.png"></a></div>  
+
+    <div class="image-item" class="image-item" data-category="lowcontrast">
+        <a href="1_1.html">
+        <img src="jpegs/11_lowcontrast/lowcontrast2.png"></a></div>  
+
+        <div class="image-item" class="image-item" data-category="lowcontrast">
+ 
+            <img src="jpegs/11_lowcontrast/lowcontrast3.png"></a></div> 
+        
+            <div class="image-item" class="image-item" data-category="lowcontrast">
+     
+                <img src="jpegs/11_lowcontrast/lowcontrast4.png"></a></div> 
+
+                <div class="image-item" class="image-item" data-category="lowcontrast">
+         
+                    <img src="jpegs/11_lowcontrast/lowcontrast5.png"></a></div> 
+                
+                    <div class="image-item" class="image-item" data-category="lowcontrast">
+             
+                        <img src="jpegs/11_lowcontrast/lowcontrast6.png"></a></div> 
+                
+                        <div class="image-item" class="image-item" data-category="lowcontrast">
+                 
+                            <img src="jpegs/11_lowcontrast/lowcontrast7.png"></a></div> 
+                        
+                            <div class="image-item" class="image-item" data-category="lowcontrast">
+                     
+                                <img src="jpegs/11_lowcontrast/lowcontrast8.png"></a></div> 
+                
+                                <div class="image-item" class="image-item" data-category="lowcontrast">
+                         
+                                    <img src="jpegs/11_lowcontrast/lowcontrast9.png"></a></div> 
+                                
+                                    <div class="image-item" class="image-item" data-category="lowcontrast">
+                             
+                                        <img src="jpegs/11_lowcontrast/lowcontrast10.png"></a></div> 
+        
+<!--collage-->  
+
+<div class="image-item" class="image-item" data-category="collage">
+    <a href="1_1.html">
+    <img src="jpegs/12_collage/collage1.png"></a></div>  
+
+    <div class="image-item" class="image-item" data-category="collage">
+        <a href="1_1.html">
+        <img src="jpegs/12_collage/collage2.png"></a></div>  
+
+        <div class="image-item" class="image-item" data-category="collage">
+            <a href="1_1.html" >
+            <img src="jpegs/12_collage/collage3.png"></a></div>  
+        
+            <div class="image-item" class="image-item" data-category="collage">
+     
+                <img src="jpegs/12_collage/collage4.png"></a></div>  
+
+                <div class="image-item" class="image-item" data-category="collage">
+         
+                    <img src="jpegs/12_collage/collage5.png"></a></div>  
+                
+                
+                        <div class="image-item" class="image-item" data-category="collage">
+                 
+                            <img src="jpegs/12_collage/collage7.png"></a></div>  
+                        
+                            <div class="image-item" class="image-item" data-category="collage">
+                                <a href="1_1.html" >
+                                <img src="jpegs/12_collage/collage8.png"></a></div>  
+
+                                <div class="image-item" class="image-item" data-category="collage">
+                         
+                                    <img src="jpegs/12_collage/collage9.png"></a></div>  
+                                
+                                    <div class="image-item" class="image-item" data-category="collage">
+                             
+                                        <img src="jpegs/12_collage/collage10.png"></a></div>  
+
+<!--with rocks-->  
+
+
+<div class="image-item" class="image-item" data-category="madewithrocks">
+    <a href="1_1.html">
+    <img src="jpegs/13_withrocks/withrocks1.png"></a></div> 
+
+    <div class="image-item" class="image-item" data-category="madewithrocks">
+        <a href="1_1.html" >
+        <img src="jpegs/13_withrocks/withrocks2.png"></a></div> 
+
+<div class="image-item" class="image-item" data-category="madewithrocks">
+    <a href="1_1.html" >
+    <img src="jpegs/13_withrocks/withrocks3.png"></a></div> 
+
+    <div class="image-item" class="image-item" data-category="madewithrocks">
+        <a href="1_1.html" >
+        <img src="jpegs/13_withrocks/withrocks4.png"></a></div> 
+
+        <div class="image-item" class="image-item" data-category="madewithrocks">
+            <a href="1_1.html" >
+            <img src="jpegs/13_withrocks/withrocks5.png"></a></div> 
+        
+            <div class="image-item" class="image-item" data-category="madewithrocks">
+                <a href="1_1.html" >
+                <img src="jpegs/13_withrocks/withrocks6.png"></a></div> 
+
+                <div class="image-item" class="image-item" data-category="madewithrocks">
+                    <a href="1_1.html" >
+                    <img src="jpegs/13_withrocks/withrocks7.png"></a></div> 
+                
+                    <div class="image-item" class="image-item" data-category="madewithrocks">
+                        <a href="1_1.html" >
+                        <img src="jpegs/13_withrocks/withrocks8.png"></a></div> 
+                
+                        <div class="image-item" class="image-item" data-category="madewithrocks">
+                            <a href="1_1.html" >
+                            <img src="jpegs/13_withrocks/withrocks9.png"></a></div> 
+                        
+                            <div class="image-item" class="image-item" data-category="madewithrocks">
+                     
+                                <img src="jpegs/13_withrocks/withrocks10.png"></a></div> 
+
+<!--without looking-->  
+
+<div class="image-item" class="image-item" data-category="withoutlooking">
+    <a href="1_1.html" >
+    <img src="jpegs/14_withoutlooking/notlooking1.png"></a></div> 
+
+    <div class="image-item" class="image-item" data-category="withoutlooking">
+        <a href="1_1.html" >
+        <img src="jpegs/14_withoutlooking/notlooking2.png"></a></div> 
+
+        <div class="image-item" class="image-item" data-category="withoutlooking">
+            <a href="1_1.html" >
+            <img src="jpegs/14_withoutlooking/notlooking3.png"></a></div> 
+        
+            <div class="image-item" class="image-item" data-category="withoutlooking">
+                <a href="1_1.html" >
+                <img src="jpegs/14_withoutlooking/notlooking4.png"></a></div> 
+
+                <div class="image-item" class="image-item" data-category="withoutlooking">
+                    <a href="1_1.html" >
+                    <img src="jpegs/14_withoutlooking/notlooking5.png"></a></div> 
+                
+                    <div class="image-item" class="image-item" data-category="withoutlooking">
+             
+                        <img src="jpegs/14_withoutlooking/notlooking6.png"></a></div> 
+                
+                        <div class="image-item" class="image-item" data-category="withoutlooking">
+                 
+                            <img src="jpegs/14_withoutlooking/notlooking7.png"></a></div> 
+                        
+                            <div class="image-item" class="image-item" data-category="withoutlooking">
+                     
+                                <img src="jpegs/14_withoutlooking/notlooking8.png"></a></div> 
+
+                                <div class="image-item" class="image-item" data-category="withoutlooking">
+                         
+                                    <img src="jpegs/14_withoutlooking/notlooking9.png"></a></div> 
+                                
+                                    <div class="image-item" class="image-item" data-category="withoutlooking">
+                            
+                                        <img src="jpegs/14_withoutlooking/notlooking10.png"></a></div> 
+            
+    
+
+
+</div>
+
+</body>
+</html>

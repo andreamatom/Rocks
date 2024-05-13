@@ -1,0 +1,361 @@
+/* TYPE CSS */
+
+a {
+    color: black; 
+    text-decoration: underline;
+}
+
+a:hover, a:focus {
+    color: #95ff00; 
+    text-decoration: underline; 
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Karla", sans-serif;
+    font-weight: 300;
+}
+
+
+.karla-uniquifier {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding-bottom: 15px;
+    font-family: "Karla", sans-serif;
+    font-weight: 300;
+}
+
+/* GRID/COLUMNS */
+
+.image-container {
+    width: 300px;
+    height: AUTO;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.random-image {
+    max-width:100%;
+    max-height: AUTO;
+}
+
+.parent-container {
+    display: flex;
+    justify-content: center;  
+    align-items: center;    
+    flex-wrap: wrap;  
+}
+
+:root {
+    --columns: 17; /* Default column number */
+}
+
+.image-grid {
+    display: grid;
+    padding-top: 12vh; 
+    gap: 15px;
+    grid-template-columns: repeat(var(--columns), 1fr);
+}
+
+
+.image-item {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.image-item img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* SLIDER */
+
+.slider-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.slider-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+
+#col-slider {
+    appearance: none;
+    -webkit-appearance: none;  /* Override default look */
+    width: 100%;  /* Full width of its container */
+    height: 8px;  /* Height of the track */
+    background: #95ff00;  /* Gray background */
+    border: 1.5px solid black;
+}
+
+#col-slider:hover {
+    background: white;  /* Darker background on hover */
+    border: 1.5px solid black;
+}
+
+#col-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 20px;  
+    height: 20px;  /* Height of the thumb */
+    background: white;  /* Green background */
+    cursor: pointer; 
+    border-radius: 0%;  
+    border: 1.5px solid #000; 
+}
+
+#col-slider:focus::-webkit-slider-thumb {
+    background:  #95ff00;  /* Darker green when focused */
+}
+
+/* BREAKPOINT */
+
+@media (max-width: 600px) {
+    :root {
+        --columns: 2;  /* Reducing columns for smaller screens */
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(var(--columns, 3), 1fr);  /* Adjust grid layout */
+        padding-top: 25vh;  /* Adjust padding */
+    }
+
+    .slider-container {
+        display: none;  /* Hide the slider container on small screens */
+    }
+
+    .slider-container label {
+        display: none;  
+    }
+
+    #col-slider {
+        display: none;  
+    }
+
+        .modal-content {
+            display: none;
+        }
+
+        .modal {
+            display: none;
+        }
+
+        .modal-content img {
+            display: none;
+        }
+
+        .close {
+            display: none;
+        }
+
+        .prev, .next  {
+            display: none;
+        }
+
+    }
+
+
+
+
+
+/* HEADER */
+.navigation {
+    position: fixed;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100vw;
+}
+
+.left-content {
+    display: flex;
+    align-items: center;
+}
+
+.right-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    margin-right: 20px;
+}
+
+
+.right-content a, .right-content button {
+    margin-left: 10px; /* Space between elements in the right content */
+}
+
+/* ABOUT BUTTON */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px; 
+    height: 400px;
+    background-color:  #95ff00;;
+    border: solid black 1.5px;
+    z-index: 1000; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#closeButton {
+    position: absolute; /* Position the button absolutely within .popup */
+    top: 10px; /* Distance from the top of the container */
+    right: 10px; /* Distance from the right of the container */
+    padding: 5px 5px; /* Padding inside the button */
+}
+
+/* BUTTON */
+button {
+    background-color: #ffffff; 
+    color: rgb(0, 0, 0);              
+    border:solid;             
+    padding: 10px 8px;        
+    text-align: center;       
+    text-decoration: none;     
+    display: inline-block;    
+    font-size: 14px;      
+    margin: 4px 2px;           
+    cursor: pointer;                
+}
+
+button:hover {
+    background-color: #95ff00; 
+    color: rgb(0, 0, 0);   
+    border:solid;           
+}
+
+.active-button {
+    background-color: #95ff00; /* Green background for active state */
+    color: black; /* Change text color if needed */
+}
+
+
+/* SLIDESHOW */
+/* Style for the Modal (background) */
+  
+  .modal {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+   
+}
+
+.modal-content img {
+    max-width: 100%; 
+    max-height: 100%; 
+    display: block; 
+    object-fit: contain; 
+}
+
+
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 20% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1.5px solid black;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ 
+  
+  #closeButton {
+    position: absolute;  /* Position relative to its nearest positioned ancestor */
+    top: 10px;           /* 10 pixels from the top of the modal */
+    right: 10px;         /* 10 pixels from the right of the modal */
+    padding: 3px 5px;   /* Padding inside the button for better touch */
+    cursor: pointer;     /* Pointer cursor on hover */
+    border: solid black 1.5px;        /* No border */
+    background: white;    /* No background */
+    color: black;         /* Light grey color, adjust as needed */
+    font-size: 18px;
+    font-family: "Karla", sans-serif;
+    font-weight: 300;
+}
+
+#closeButton:hover {
+    color: black;        
+    background: #95ff00;
+}
+
+
+  /* Navigation Buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-size: 30px;
+    font-family: "Karla", sans-serif;
+    font-weight: 300;
+    transition: 0.6s ease;
+    text-decoration: none; 
+    background: transparent;
+    border: none; 
+    z-index: 10;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 20px;
+  }
+  
+  /* Position the "prev button" to the left */
+  .prev {
+    left: 20px;
+  }
+  
+  .prev:hover {
+    color: black; /* Set text color */
+    text-decoration: none; /* Ensure no underline */
+}
+
+.next:hover {
+    color: black; /* Set text color */
+    text-decoration: none; /* Ensure no underline */
+}
